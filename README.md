@@ -1,6 +1,6 @@
 # e-commerce
 
-<link src='Diagrama App.jpg'>
+<img align="center" src='Diagrama App.jpg' />
 
 Aplicação web: React + Typescript
 - npx
