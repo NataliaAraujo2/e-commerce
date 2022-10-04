@@ -1,9 +1,9 @@
-const AppEcommerce= () => {
+import Navigation from "./components/Navigation/Navigation"
+
+const AppEcommerce = () =>{
   return (
-    <div className="App">
-      <span>Bem Vindo!</span>
-    </div>
-  );
+    <Navigation/>
+  )
 }
 
-export default AppEcommerce;
+export default AppEcommerce
