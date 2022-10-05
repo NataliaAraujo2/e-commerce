@@ -1,8 +1,11 @@
-import Navigation from "./components/Navigation/Navigation"
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from "./components/Navigation/Navigation";
 
 const AppEcommerce = () =>{
   return (
-    <Navigation/>
+    <Router>
+      <Navigation/>
+    </Router>
   )
 }
 
