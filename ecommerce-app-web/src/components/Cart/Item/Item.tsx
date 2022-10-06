@@ -4,17 +4,32 @@ import { CartItem } from "../../../types/typeApp";
 import { faMinus, faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Button } from  "react-bootstrap";
 import "./style.css";
+import { CartContext } from "../../../context/CartContext";
+import { useContext } from "react";
 
 type Props = {
     item:CartItem
 }
-const Item =()=>{
+const Item =({ item }:Props)=>{
+    const { dispatch } = useContext(CartContext);
     return (
         <>
          <div className="shopping-cart-item">
             <div className="item-action">
-                <Button variant="secondary">
+                <Button 
+                    variant="secondary"
+                    onClick={() => dispatch({
+                        payload: item,
+                        type: "ADD"
+                    })}>
                     <FontAwesomeIcon icon={faPlus} color="white" />
+                </Button>
+                <Button 
+                    variant="secondary"
+                    onClick={() => dispatch({
+                        payload: item.id,
+                        type: "REMOVE"
+                    })}>
                     <FontAwesomeIcon icon={faMinus} color="white" />
                 </Button>
             </div>
@@ -35,6 +50,10 @@ const Item =()=>{
                 <Button
                     variant="danger"
                     Title="Retirar produto do carrinho">
+                    onClick={() => dispatch({
+                        payload: item.id,
+                        type: "REMOVE-ALL"
+                    }
                     <FontAwesomeIcon icon={faTrashAlt} color="white"     
                 </Button>
             </div>
