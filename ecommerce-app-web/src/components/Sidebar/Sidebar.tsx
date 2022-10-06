@@ -11,7 +11,6 @@ const Sidebar = ({ handleClose }: Props) => {
       show={true}
       onHide={() => handleClose(false)}
       placement="end"
-      sroll={true}
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Carrinho de Compras</Offcanvas.Title>

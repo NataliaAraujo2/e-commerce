@@ -24,7 +24,7 @@ const NavBar=({handleOpen}: Props)=>{
                     size="2x"
                     style={{ cursor: 'pointer'}}
                     onClick={() => handleOpen(true)} />
-                   <Badge bg='secondary'>8</Badge>
+                   <Badge bg='secondary'>0</Badge>
                 </Container>
               </Navbar>
             );

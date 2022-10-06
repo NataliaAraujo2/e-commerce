@@ -24,6 +24,7 @@ const Item =({ item }:Props)=>{
                     })}>
                     <FontAwesomeIcon icon={faPlus} color="white" />
                 </Button>
+                <span>{item.amount}</span>
                 <Button 
                     variant="secondary"
                     onClick={() => dispatch({
@@ -42,7 +43,7 @@ const Item =({ item }:Props)=>{
                         {item.title}
                     </div>
                     <div className="item-detail-info-prices">
-                        <span>{item.price}</span>
+                        <span>R${item.price}</span>
                     </div>
                 </div>
             </div>
