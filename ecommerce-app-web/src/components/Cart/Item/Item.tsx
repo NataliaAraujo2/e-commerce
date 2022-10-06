@@ -1,9 +1,9 @@
 import React from "react";
-import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartItem } from "../../../types/typeApp";
 import { faMinus, faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Button } from  "react-bootstrap";
+import "./style.css";
 
 type Props = {
     item:CartItem

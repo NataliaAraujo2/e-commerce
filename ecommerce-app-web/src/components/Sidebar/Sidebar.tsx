@@ -1,5 +1,6 @@
 import React from "react";
 import { Offcanvas } from "react-bootstrap";
+import Cart from "../Cart/Cart";
 
 type Props = {
   handleClose: (state: boolean) => void;
@@ -15,7 +16,7 @@ const Sidebar = ({ handleClose }: Props) => {
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Carrinho de Compras</Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body>Cart</Offcanvas.Body>
+      <Offcanvas.Body><Cart/></Offcanvas.Body>
     </Offcanvas>
   );
 };
