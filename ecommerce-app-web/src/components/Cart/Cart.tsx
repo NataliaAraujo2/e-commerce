@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import Footer from "./Footer/Footer";
 import Item from "./Item/Item";
 import "./style.css";
 
@@ -14,6 +15,7 @@ const Cart = () => {
                     key={item.id}
                     item={item} />
             })
+            <Footer />
         </div>
 
     )
