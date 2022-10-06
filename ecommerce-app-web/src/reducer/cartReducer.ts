@@ -33,10 +33,10 @@ const cartReducer = (state: CartItem[], action: CartActionReducer) => {
             }, [] as CartItem[]);
 
         case "REMOVE-ALL":
-            return state;
+            return state.filter(item => item.id !== action.payload);
 
         case "CLEAR":
-            return state;
+            return [];
 
         default:
             return state;
